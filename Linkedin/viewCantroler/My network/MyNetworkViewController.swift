@@ -95,7 +95,6 @@ extension MyNetworkViewController: UICollectionViewDataSource, UICollectionViewD
         } else {
             return arrProfileName.count
         }
-       
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -132,7 +131,6 @@ extension MyNetworkViewController: UICollectionViewDelegateFlowLayout{
         } else {
             return CGSize(width: 375, height: 230)
         }
-     
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)

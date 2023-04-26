@@ -17,9 +17,9 @@ class ShowAllViewController: UIViewController {
 
     @IBOutlet weak var showAllTableView: UITableView!
     
-    var arrImage: [String] = ["homedp1","homedp2","homedp3"]
-    var arrProfileName: [String] = ["Ayush Kakdiya","Kamo","Apple"]
-    var arrArea: [String] = ["Surat, Gujarat","Surat, Gujarat","California, Uk"]
+    var arrImage: [String] = ["homepost1","homepost2","homepost3","homepost4","homepost5","homepost6","homepost7","homepost8"]
+    var arrProfileName: [String] = ["Ayush Kakdiya","Kamo","Apple","red & White Multimidia Education","infosys","Narendra Modi","Elon Musk","Amazon"]
+    var arrArea: [String] = ["Surat, Gujarat","Surat, Gujarat","California, Uk","Surat, Gujarat","Bangaluru, Karnataka","Hyderabad, Telangana","Canada, Uk","Surat, Gjarat"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

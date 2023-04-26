@@ -35,6 +35,8 @@
 		0C6616CF29C30EE400399006 /* ShowAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6616CD29C30EE400399006 /* ShowAllTableViewCell.swift */; };
 		0C6616D029C30EE400399006 /* ShowAllTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6616CE29C30EE400399006 /* ShowAllTableViewCell.xib */; };
 		0C7E571029B1A96200D3A2E7 /* messageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E570F29B1A96200D3A2E7 /* messageViewController.swift */; };
+		0C83907229D156DC000E5BC9 /* MoreJobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83907029D156DC000E5BC9 /* MoreJobTableViewCell.swift */; };
+		0C83907329D156DC000E5BC9 /* MoreJobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C83907129D156DC000E5BC9 /* MoreJobTableViewCell.xib */; };
 		0C9710B929A85669004F8D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9710B829A85669004F8D0F /* AppDelegate.swift */; };
 		0C9710BB29A85669004F8D0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9710BA29A85669004F8D0F /* SceneDelegate.swift */; };
 		0C9710C329A85669004F8D0F /* Linkedin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C9710C129A85669004F8D0F /* Linkedin.xcdatamodeld */; };
@@ -121,6 +123,8 @@
 		0C6616CD29C30EE400399006 /* ShowAllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllTableViewCell.swift; sourceTree = "<group>"; };
 		0C6616CE29C30EE400399006 /* ShowAllTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowAllTableViewCell.xib; sourceTree = "<group>"; };
 		0C7E570F29B1A96200D3A2E7 /* messageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageViewController.swift; sourceTree = "<group>"; };
+		0C83907029D156DC000E5BC9 /* MoreJobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreJobTableViewCell.swift; sourceTree = "<group>"; };
+		0C83907129D156DC000E5BC9 /* MoreJobTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreJobTableViewCell.xib; sourceTree = "<group>"; };
 		0C9710B529A85669004F8D0F /* Linkedin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linkedin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9710B829A85669004F8D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9710BA29A85669004F8D0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -270,6 +274,15 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		0C50B19629E7BBBF004F4C25 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0C9710F429A856F9004F8D0F /* CollectionViewCell */,
+				0CFECCEF29B5B28D00EE7D27 /* TableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		0C9710AC29A85669004F8D0F = {
 			isa = PBXGroup;
 			children = (
@@ -296,8 +309,7 @@
 				0C9710B829A85669004F8D0F /* AppDelegate.swift */,
 				0C9710BA29A85669004F8D0F /* SceneDelegate.swift */,
 				0C9710F329A856E8004F8D0F /* viewCantroler */,
-				0C9710F429A856F9004F8D0F /* CollectionViewCell */,
-				0CFECCEF29B5B28D00EE7D27 /* TableViewCell */,
+				0C50B19629E7BBBF004F4C25 /* Cells */,
 				0CBC96FE29AC733C00C2FA4B /* Main.storyboard */,
 				0C9710C429A8566A004F8D0F /* Assets.xcassets */,
 				0C9710C629A8566A004F8D0F /* LaunchScreen.storyboard */,
@@ -370,6 +382,8 @@
 				0CB18F3229C2D7BF0033249A /* RecommendedTableViewCell.xib */,
 				0C6616CD29C30EE400399006 /* ShowAllTableViewCell.swift */,
 				0C6616CE29C30EE400399006 /* ShowAllTableViewCell.xib */,
+				0C83907029D156DC000E5BC9 /* MoreJobTableViewCell.swift */,
+				0C83907129D156DC000E5BC9 /* MoreJobTableViewCell.xib */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -588,6 +602,7 @@
 				0CBC96FF29AC733C00C2FA4B /* Main.storyboard in Resources */,
 				0C30EE1929BAD65000CEFC11 /* DiscovryCollectionViewCell.xib in Resources */,
 				0CEB78B529C091B2000041B4 /* FollowTableViewCell.xib in Resources */,
+				0C83907329D156DC000E5BC9 /* MoreJobTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +629,7 @@
 			files = (
 				0CFECCF529B5F0FE00EE7D27 /* GroupViewController.swift in Sources */,
 				0C9710F229A856CA004F8D0F /* HomeViewController.swift in Sources */,
+				0C83907229D156DC000E5BC9 /* MoreJobTableViewCell.swift in Sources */,
 				0C9710B929A85669004F8D0F /* AppDelegate.swift in Sources */,
 				0C9710BB29A85669004F8D0F /* SceneDelegate.swift in Sources */,
 				0CB18F2B29C2D5170033249A /* MyJobsViewController.swift in Sources */,
@@ -825,6 +841,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y3U6SSHP9B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Linkedin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -852,6 +869,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y3U6SSHP9B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Linkedin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -14,16 +14,14 @@ struct Focuse: Decodable{
     var date: String
 }
 
-
 class FocusedViewController: UIViewController {
-    
     
     @IBOutlet weak var messageTableView: UITableView!
     
     var arrData: ApiCll!
     var arrProfileName: [Data] = []
     var arrImage: [String] = ["homedp1","homedp2","homedp3","homedp4","homedp5","homedp6","homedp7","homedp8"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         register()
@@ -36,22 +34,18 @@ class FocusedViewController: UIViewController {
         messageTableView.dataSource = self
         messageTableView.separatorStyle = .none
     }
-
+    
     
     func apiCalling() {
-        AF.request("https://reqres.in/api/users?page=2",method: .get).responseData { [self]
+        AF.request("https://reqres.in/api/users?page=2"/*,method: .get*/).responseData { [self]
             response in
             debugPrint(response)
-            if response.response?.statusCode == 200{
-                guard let apiData = response.data else { return }
-                do {
-                    arrData = try JSONDecoder().decode(ApiCll.self, from: apiData)
-                    arrProfileName = self.arrData.data
-                    messageTableView.reloadData()
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }else{
+            guard let apiData = response.data else { return }
+            do {
+                arrData = try JSONDecoder().decode(ApiCll.self, from: apiData)
+                arrProfileName = self.arrData.data
+                messageTableView.reloadData()
+            } catch {
                 print("error")
             }
         }
@@ -66,7 +60,6 @@ extension FocusedViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrProfileName.count
-      
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,6 +85,7 @@ struct ApiCll: Decodable{
     var total_pages: Int
     var data: [Data]
 }
+
 struct Data: Decodable{
     var id: Int
     var email: String
