@@ -13,12 +13,28 @@ struct Focuse: Decodable{
     var message: String
     var date: String
 }
+struct ApiCell: Decodable{
+    var page: Int
+    var per_page: Int
+    var total: Int
+    var total_pages: Int
+    var data: [Data]
+}
+
+struct Data: Decodable{
+    var id: Int
+    var email: String
+    var first_name: String
+    var last_name: String
+    var avatar: String
+}
+
 
 class FocusedViewController: UIViewController {
     
     @IBOutlet weak var messageTableView: UITableView!
     
-    var arrData: ApiCll!
+    var arrData: ApiCell!
     var arrProfileName: [Data] = []
     var arrImage: [String] = ["homedp1","homedp2","homedp3","homedp4","homedp5","homedp6","homedp7","homedp8"]
     
@@ -42,7 +58,7 @@ class FocusedViewController: UIViewController {
             debugPrint(response)
             guard let apiData = response.data else { return }
             do {
-                arrData = try JSONDecoder().decode(ApiCll.self, from: apiData)
+                arrData = try JSONDecoder().decode(ApiCell.self, from: apiData)
                 arrProfileName = self.arrData.data
                 messageTableView.reloadData()
             } catch {
@@ -77,19 +93,4 @@ extension FocusedViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-}
-struct ApiCll: Decodable{
-    var page: Int
-    var per_page: Int
-    var total: Int
-    var total_pages: Int
-    var data: [Data]
-}
-
-struct Data: Decodable{
-    var id: Int
-    var email: String
-    var first_name: String
-    var last_name: String
-    var avatar: String
 }

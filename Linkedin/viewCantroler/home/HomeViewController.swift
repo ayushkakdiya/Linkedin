@@ -7,11 +7,11 @@
 
 import UIKit
 
-struct ProfilePost {
-    var profileName: String
-    var profileFollowers: String
-    var discription: String
-}
+//struct ProfilePost {
+//    var profileName: String
+//    var profileFollowers: String
+//    var discription: String
+//}
 
 class HomeViewController: UIViewController {
     
